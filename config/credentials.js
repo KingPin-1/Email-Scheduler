@@ -1,6 +1,6 @@
 const auth = {
-    USER_EMAIL: "1901330100158@niet.co.in",
-    USER_PASSWORD: "K4whiL3onard",
+  USER_EMAIL: "user_email_here_@provider.com",
+  USER_PASSWORD: "password",
 };
 
 module.exports = auth;
