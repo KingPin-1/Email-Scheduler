@@ -1,8 +1,8 @@
 const nodemailer = require("nodemailer");
 const { USER_EMAIL, USER_PASSWORD } = require("../config/credentials");
 
-const SMTP_PORT = 587;
-const HOST_SERVICE = "smtp-relay.sendinblue.com";
+// const SMTP_PORT = 587;
+// const HOST_SERVICE = "smtp-relay.sendinblue.com"; Couldn't get send in blue to work
 
 const SENDER_EMAIL = USER_EMAIL;
 const RECEIVER_EMAIL = "mohdathar1991@gmail.com";
@@ -10,7 +10,7 @@ const RECEIVER_EMAIL = "mohdathar1991@gmail.com";
 const CC = [];
 const BCC = [];
 
-const EMAIL_SUB = "HAPPY BIRTHDAY";
+const EMAIL_SUB = "HAPPY BIRTHDAY my friend";
 const EMAIL_HTML_BODY = "<h1>Happy Birthday!!!</h1>";
 
 const options = {
@@ -23,9 +23,7 @@ const options = {
 };
 
 const transporter = nodemailer.createTransport({
-    host: HOST_SERVICE,
-    port: SMTP_PORT,
-    secure: false,
+    service: "hotmail",
     auth: {
         user: USER_EMAIL,
         pass: USER_PASSWORD,
